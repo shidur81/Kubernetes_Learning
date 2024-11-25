@@ -1,3 +1,3 @@
 # Kubernetes_Learning 
 ## Chapters 
-- [Chapter One](Introduction.md/README.md)
+- [Chapter One](/Chapter%20One/Introduction.md)
