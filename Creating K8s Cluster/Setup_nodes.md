@@ -80,20 +80,20 @@ apt-get install -y software-properties-common curl
 ## **Step 4: Add the Kubernetes repository on each node**
 ```sh
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key |
-    gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /" |
-    tee /etc/apt/sources.list.d/kubernetes.list
+   sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 ---
 ## **Step 5: Add the CRI-O repository on each node**
 ```sh
 curl -fsSL https://pkgs.k8s.io/addons:/cri-o:/stable:/v1.32/deb/Release.key |
-    gpg --dearmor -o /etc/apt/keyrings/cri-o-apt-keyring.gpg
+    sudo gpg --dearmor -o /etc/apt/keyrings/cri-o-apt-keyring.gpg
 
 echo "deb [signed-by=/etc/apt/keyrings/cri-o-apt-keyring.gpg] https://pkgs.k8s.io/addons:/cri-o:/stable:/v1.32/deb/ /" |
-    tee /etc/apt/sources.list.d/cri-o.list
+    sudo tee /etc/apt/sources.list.d/cri-o.list
 ```
 ---
 ## **Step 6: Install Kubernetes Components (kubeadm, kubelet, kubectl)**
